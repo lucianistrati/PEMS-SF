@@ -1,0 +1,316 @@
+<!-- ?xml version='1.0' encoding='UTF-8'? -->
+<link href="/github-markdown-css/github-css.css" rel="stylesheet"/>
+<meta charset="utf-8" content="text/html"/>
+<div class="gist">
+<style class="formula-style">
+        svg.gh-md-to-html-formula {
+            fill: black;
+        }
+    </style>
+<div class="gist-file"> <!-- This is the class that is responsible for the boxing! -->
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file" id="user-content-article-REPORT">
+<div class="Box-body readme blob js-code-block-container p-5 p-xl-6" id="user-content-file-docker-image-pull-md-readme" style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
+<article class="markdown-body entry-content container-lg" itemprop="text">
+<h1 id="user-content-raport">
+<a aria-hidden="true" class="anchor" href="#user-content-raport" id="user-content-raport" name="user-content-raport"><span aria-hidden="true" class="octicon octicon-link"></span></a>Raport</h1>
+<h2 id="user-content-pregatirea-proiectului">
+<a aria-hidden="true" class="anchor" href="#user-content-pregatirea-proiectului" id="user-content-pregatirea-proiectului" name="user-content-pregatirea-proiectului"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pregatirea proiectului</h2>
+<p>Pentru a folosi proiectul este necesara crearea unui environment anaconda cu versiunea python 3.10</p>
+<pre lang="commandline"><code>conda create -n my_env python==3.10
+</code></pre>
+<p>Pentru a activa apoi mediul:</p>
+<pre><code>conda activate my_env
+</code></pre>
+<h2 id="user-content-31-task-ul-de-analiza-exploratorie-a-datelor-pe-ambele-seturi-de-date">
+<a aria-hidden="true" class="anchor" href="#user-content-31-task-ul-de-analiza-exploratorie-a-datelor-pe-ambele-seturi-de-date" id="user-content-31-task-ul-de-analiza-exploratorie-a-datelor-pe-ambele-seturi-de-date" name="user-content-31-task-ul-de-analiza-exploratorie-a-datelor-pe-ambele-seturi-de-date"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1 Task-ul de analiza exploratorie a datelor (pe ambele seturi de date)</h2>
+<h3 id="user-content-1-analiza-setului-pems-sf">
+<a aria-hidden="true" class="anchor" href="#user-content-1-analiza-setului-pems-sf" id="user-content-1-analiza-setului-pems-sf" name="user-content-1-analiza-setului-pems-sf"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Analiza setului PEMS-SF</h3>
+<h4 id="user-content-a-grafice">
+<a aria-hidden="true" class="anchor" href="#user-content-a-grafice" id="user-content-a-grafice" name="user-content-a-grafice"><span aria-hidden="true" class="octicon octicon-link"></span></a>a) Grafice</h4>
+<p><a href="/images/barchart_PEMS-SF.png" rel="noopener noreferrer" target="_blank"><img alt="1. Barchart PEMS-SF" data-canonical-src="/images/barchart_PEMS-SF.png" src="/images/barchart_PEMS-SF.png" style="max-width:100%; max-height: 480px;" title="1. Barchart PEMS-SF"/></a></p>
+<p><a href="/images/moving_averages.png" rel="noopener noreferrer" target="_blank"><img alt="2. Moving averages PEMS-SF" data-canonical-src="/images/moving_averages.png" src="/images/moving_averages.png" style="max-width:100%; max-height: 480px;" title="2. Moving averages PEMS-SF"/></a></p>
+<p><a href="/images/boxplot.png" rel="noopener noreferrer" target="_blank"><img alt="3. Boxplot PEMS-SF" data-canonical-src="/images/boxplot.png" src="/images/boxplot.png" style="max-width:100%; max-height: 480px;" title="3. Boxplot PEMS-SF"/></a></p>
+<p><a href="/images/area_chart.png" rel="noopener noreferrer" target="_blank"><img alt="4. AreaChart PEMS-SF" data-canonical-src="/images/area_chart.png" src="/images/area_chart.png" style="max-width:100%; max-height: 480px;" title="4. AreaChart PEMS-SF"/></a></p>
+<p><a href="/images/piechart.png" rel="noopener noreferrer" target="_blank"><img alt="5. Piechart PEMS-SF" data-canonical-src="/images/piechart.png" src="/images/piechart.png" style="max-width:100%; max-height: 480px;" title="5. Piechart PEMS-SF"/></a></p>
+<h4 id="user-content-b-interpretare">
+<a aria-hidden="true" class="anchor" href="#user-content-b-interpretare" id="user-content-b-interpretare" name="user-content-b-interpretare"><span aria-hidden="true" class="octicon octicon-link"></span></a>b) Interpretare</h4>
+<p>Ceea ce figura 1 ne arata este ca datele sunt aproape perfect balansate, se poate observa ca sunt mai putine date in zilele de marti si ceva mai multe in zilele de joi si vineri.</p>
+<p>Uitandu-ne la figura 2 se poate observa o crestere brusca, urmata de o stationare in intervalul 0.06-0.08 si apoi o scadere mai lenta, ceea ce se poate vedea si din cum arata cele 3 moving averages realizate pe figura.</p>
+<p>Din analiza figurii numarul 3 se poate vedea ca boxplot-ul surprinde o valoare mediana foarte inalta, mai mare in decat media valorilor, totodata diferenta intre percentila 75 si 50 este mult mai mica decat intre percentila 50 si 25. Deci putem deduce ca boxplotul este skewed puternic spre dreapta</p>
+<h3 id="user-content-2-analiza-setului-uwave-gesture-library">
+<a aria-hidden="true" class="anchor" href="#user-content-2-analiza-setului-uwave-gesture-library" id="user-content-2-analiza-setului-uwave-gesture-library" name="user-content-2-analiza-setului-uwave-gesture-library"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Analiza setului UWave Gesture Library</h3>
+<h4 id="user-content-a-grafice-1">
+<a aria-hidden="true" class="anchor" href="#user-content-a-grafice-1" id="user-content-a-grafice-1" name="user-content-a-grafice-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>a) Grafice</h4>
+<p><a href="/images/facetgrid.png" rel="noopener noreferrer" target="_blank"><img alt="6. Facetgrid UWave" data-canonical-src="/images/facetgrid.png" src="/images/facetgrid.png" style="max-width:100%; max-height: 800px;" title="6. Facetgrid UWave"/></a></p>
+<p><a href="/images/barchart_UWaveGesture_Library.png" rel="noopener noreferrer" target="_blank"><img alt="7. Barchart UWaveGesture_Library" data-canonical-src="/images/barchart_UWaveGesture_Library.png" src="/images/barchart_UWaveGesture_Library.png" style="max-width:100%; max-height: 480px;" title="7. Barchart UWaveGesture_Library"/></a></p>
+<p><a href="/images/timseries.png" rel="noopener noreferrer" target="_blank"><img alt="8. Timeseries axis plots UWave" data-canonical-src="/images/timseries.png" src="/images/timseries.png" style="max-width:100%; max-height: 480px;" title="8. Timeseries axis plots UWave"/></a></p>
+<h4 id="user-content-b-interpretare-1">
+<a aria-hidden="true" class="anchor" href="#user-content-b-interpretare-1" id="user-content-b-interpretare-1" name="user-content-b-interpretare-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>b) Interpretare</h4>
+<p>In figura 4 facetgrid-ul este skewe catre partea dreapta puternic cu foarte mici crestere la capatul din dreapta, cu cateva varfuri si in partea stanga.</p>
+<p>Din figura 5 se poate observa ca datele sunt perfect balansate dupa labeleurile de la 1 la 8</p>
+<p>La figura 6 se poate observa ca semnalul pe axa y se deplaseaza cu o corelatie negativa destul de mare in majoritatea semnalului. Semnalul pe z pare sa fie pozitiv corelat cu y de asemenea.</p>
+<h2 id="user-content-32-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-pems-sf">
+<a aria-hidden="true" class="anchor" href="#user-content-32-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-pems-sf" id="user-content-32-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-pems-sf" name="user-content-32-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-pems-sf"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2 Task-ul de feature extraction si clasificare (pentru setul de date PEMS-SF)</h2>
+<h3 id="user-content-1-cel-mai-bun-model">
+<a aria-hidden="true" class="anchor" href="#user-content-1-cel-mai-bun-model" id="user-content-1-cel-mai-bun-model" name="user-content-1-cel-mai-bun-model"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Cel mai bun model</h3>
+<p>Cel mai bun model a fost de departe RandomForest ajungand dupa finetuning la o acuratete de 77%.</p>
+<h3 id="user-content-2-hiperparametrii-si-impactul-lor">
+<a aria-hidden="true" class="anchor" href="#user-content-2-hiperparametrii-si-impactul-lor" id="user-content-2-hiperparametrii-si-impactul-lor" name="user-content-2-hiperparametrii-si-impactul-lor"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Hiperparametrii si impactul lor</h3>
+<p>Hiperparametrii nu s-au dovedit sa aiba o diferenta foarte mare in performanta, fata de scenariul in care nu s-a facut finetunare hiperparametrilor, exceptand cazul Random Forest cand au fost diferente chiar de 27 de procente cu ajutorul finetunarii unor parametri ideali.</p>
+<h3 id="user-content-3-impactul-featureurilor">
+<a aria-hidden="true" class="anchor" href="#user-content-3-impactul-featureurilor" id="user-content-3-impactul-featureurilor" name="user-content-3-impactul-featureurilor"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Impactul featureurilor</h3>
+<p>Featureu-urile noi adaugate nu au avut impact semnificativ (relevant statistic), fapt dovedit din faptul ca datele au o dimensionalitate foarte mare, iar un numar relativ mic de feature-uri nu este "simtit" de puterea de reprezentare a modelelor.</p>
+<h3 id="user-content-4-cele-mai-bune-clase">
+<a aria-hidden="true" class="anchor" href="#user-content-4-cele-mai-bune-clase" id="user-content-4-cele-mai-bune-clase" name="user-content-4-cele-mai-bune-clase"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Cele mai bune clase</h3>
+<p>Clasele 1 si 7 au avut cele mai bune rezultate pentru fiecare model in parte, fapt ce e posibil sa se explice prin faptul ca aceste zile pot fi outliere ale saptamanii intermeni de aglomeratie intr-un oras (deoarece oamenii se deplaseaza in/din afara orasului in aceste zile, restul zileleor fiind mai similare si deci mai usor de confudat de catre model).</p>
+<h4 id="user-content-5-tabele-de-rezulate">
+<a aria-hidden="true" class="anchor" href="#user-content-5-tabele-de-rezulate" id="user-content-5-tabele-de-rezulate" name="user-content-5-tabele-de-rezulate"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Tabele de rezulate</h4>
+<p>Metrica de comparare (scorul de acuratete)</p>
+<h5 id="user-content-randomforest">
+<a aria-hidden="true" class="anchor" href="#user-content-randomforest" id="user-content-randomforest" name="user-content-randomforest"><span aria-hidden="true" class="octicon octicon-link"></span></a>RandomForest</h5>
+<p>(n_estimators, max_depth, max_samples)</p>
+<ul>
+<li>50, None, 0.1: 0.50909091</li>
+<li>50, None, 0.5: 0.53636364</li>
+<li>50, 10, 0.1: 0.76590909</li>
+<li>50, 10, 0.5: [ 0.77045455 ]</li>
+<li>100, None, 0.1: 0.53409091</li>
+<li>100, None, 0.5: 0.51136364</li>
+<li>100, 10, 0.1: 0.7</li>
+<li>100, 10, 0.5: 0.71136364</li>
+</ul>
+<h5 id="user-content-svm">
+<a aria-hidden="true" class="anchor" href="#user-content-svm" id="user-content-svm" name="user-content-svm"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVM</h5>
+<p>(kernel, C)</p>
+<ul>
+<li>linear, 0.1: 0.44090909</li>
+<li>poly, 0.1: [ 0.46590909 ]</li>
+<li>linear, 1.0: 0.44545455</li>
+<li>poly, 1.0: 0.45227273</li>
+</ul>
+<h5 id="user-content-xgboost">
+<a aria-hidden="true" class="anchor" href="#user-content-xgboost" id="user-content-xgboost" name="user-content-xgboost"><span aria-hidden="true" class="octicon octicon-link"></span></a>Xgboost</h5>
+<p>(n_estimators, max_depth)</p>
+<ul>
+<li>50, None: [ 0.79090909 ]</li>
+<li>50, 10: 0.79090909,</li>
+<li>100, None: 0.7954545</li>
+<li>100, 10: 0.79545</li>
+</ul>
+<h5 id="user-content-33">
+<a aria-hidden="true" class="anchor" href="#user-content-33" id="user-content-33" name="user-content-33"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3</h5>
+<h2 id="user-content-33-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-uwave-gesture-library">
+<a aria-hidden="true" class="anchor" href="#user-content-33-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-uwave-gesture-library" id="user-content-33-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-uwave-gesture-library" name="user-content-33-task-ul-de-feature-extraction-si-clasificare-pentru-setul-de-date-uwave-gesture-library"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3 Task-ul de feature extraction si clasificare (pentru setul de date UWave Gesture Library)</h2>
+<h3 id="user-content-1-cel-mai-bun-model-1">
+<a aria-hidden="true" class="anchor" href="#user-content-1-cel-mai-bun-model-1" id="user-content-1-cel-mai-bun-model-1" name="user-content-1-cel-mai-bun-model-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Cel mai bun model</h3>
+<p>Cel mai bun model s-a dovedit a fi Multi Layer Perceptron.</p>
+<h3 id="user-content-2-hiperparametrii-si-impactul-lor-1">
+<a aria-hidden="true" class="anchor" href="#user-content-2-hiperparametrii-si-impactul-lor-1" id="user-content-2-hiperparametrii-si-impactul-lor-1" name="user-content-2-hiperparametrii-si-impactul-lor-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Hiperparametrii si impactul lor</h3>
+<p>S-a dovedit ca in majoritatea cazurilor Adam este cel mai bun optimizator. Cel mai bun batch_size a fost 8, iar in general a fost bine sa il lasam la antrenat cu 10 epoci in loc de 5</p>
+<h3 id="user-content-3-cele-mai-bune-clase">
+<a aria-hidden="true" class="anchor" href="#user-content-3-cele-mai-bune-clase" id="user-content-3-cele-mai-bune-clase" name="user-content-3-cele-mai-bune-clase"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Cele mai bune clase</h3>
+<p>Clasele pe care modelele au performat cel mai bine sunt in majoritatea cazurilor, clasele 1,2 si 4 (dupa cum se poate observa din matricile de confuzie).</p>
+<h4 id="user-content-4-tabele-de-rezulate">
+<a aria-hidden="true" class="anchor" href="#user-content-4-tabele-de-rezulate" id="user-content-4-tabele-de-rezulate" name="user-content-4-tabele-de-rezulate"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Tabele de rezulate</h4>
+<p>Metrica de comparare (scorul de acuratete)</p>
+<h2 id="user-content-32-total-cu-analiza-celor-3-modele-si-pentru-setul-de-date-uwave-gesture-library">
+<a aria-hidden="true" class="anchor" href="#user-content-32-total-cu-analiza-celor-3-modele-si-pentru-setul-de-date-uwave-gesture-library" id="user-content-32-total-cu-analiza-celor-3-modele-si-pentru-setul-de-date-uwave-gesture-library" name="user-content-32-total-cu-analiza-celor-3-modele-si-pentru-setul-de-date-uwave-gesture-library"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2 Total cu analiza celor 3 modele si pentru setul de date Uwave Gesture Library</h2>
+<h5 id="user-content-randomforest-1">
+<a aria-hidden="true" class="anchor" href="#user-content-randomforest-1" id="user-content-randomforest-1" name="user-content-randomforest-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>RandomForest</h5>
+<p>(n_estimators, max_depth, max_samples)</p>
+<ul>
+<li>
+<p>50, None, 0.1: 0.55909091</p>
+</li>
+<li>
+<p>50, None, 0.5: 0.525</p>
+</li>
+<li>
+<p>50, 10, 0.1: 0.55</p>
+</li>
+<li>
+<p>50, 10, 0.5: 0.54772727</p>
+</li>
+<li>
+<p>100, None, 0.1: 0.53409091</p>
+</li>
+<li>
+<p>100, None, 0.5: 0.53863636</p>
+</li>
+<li>
+<p>100, 10, 0.1: 0.54545455</p>
+</li>
+<li>
+<p>100, 10, 0.5: [0.56818182]</p>
+</li>
+<li>
+<p>Matricea de confuzie</p>
+</li>
+<li>
+<p>[18  2  3  1  1 14  8  6]</p>
+</li>
+<li>
+<p>[ 5 23  0  0  0  2  5  1]</p>
+</li>
+<li>
+<p>[ 4  2 28  1  3  3  7  0]</p>
+</li>
+<li>
+<p>[ 0  0  0 20 11  4  0  7]</p>
+</li>
+<li>
+<p>[ 0  0  1 11 20  0  0  0]</p>
+</li>
+<li>
+<p>[ 8  3  3  3  3 15  1  6]</p>
+</li>
+<li>
+<p>[ 2  9  5  0  1  1 19  0]</p>
+</li>
+<li>
+<p>[ 3  1  0  4  1  1  0 20]</p>
+</li>
+</ul>
+<h5 id="user-content-svm-1">
+<a aria-hidden="true" class="anchor" href="#user-content-svm-1" id="user-content-svm-1" name="user-content-svm-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVM</h5>
+<p>(kernel, C)</p>
+<ul>
+<li>
+<p>linear, 0.1: 0.48181818</p>
+</li>
+<li>
+<p>poly, 0.1: 0.375</p>
+</li>
+<li>
+<p>linear, 1.0: [0.52272727]</p>
+</li>
+<li>
+<p>poly, 1.0: 0.45681818</p>
+</li>
+<li>
+<p>Matricea de confuzie</p>
+</li>
+<li>
+<p>[18  2  2  1  0 12  6  4]</p>
+</li>
+<li>
+<p>[ 4 23  2  0  1  3  8  0]</p>
+</li>
+<li>
+<p>[ 4  3 23  1  3  6  8  0]</p>
+</li>
+<li>
+<p>[ 0  0  0 21 11  3  0  5]</p>
+</li>
+<li>
+<p>[ 0  0  4 15 23  0  1  0]</p>
+</li>
+<li>
+<p>[ 9  3  3  1  1 13  0  7]</p>
+</li>
+<li>
+<p>[ 2  8  6  0  0  1 16  0]</p>
+</li>
+<li>
+<p>[ 3  1  0  1  1  2  1 24]</p>
+</li>
+</ul>
+<h5 id="user-content-xgboost-1">
+<a aria-hidden="true" class="anchor" href="#user-content-xgboost-1" id="user-content-xgboost-1" name="user-content-xgboost-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Xgboost</h5>
+<p>(n_estimators, max_depth)</p>
+<ul>
+<li>
+<p>50, None: [0.54090909]</p>
+</li>
+<li>
+<p>50, 10: 0.53636364</p>
+</li>
+<li>
+<p>100, None: 0.52727273</p>
+</li>
+<li>
+<p>100, 10: 0.525</p>
+</li>
+<li>
+<p>Matricea de confuzie</p>
+</li>
+<li>
+<p>[18  2  3  1  1 14  8  6]</p>
+</li>
+<li>
+<p>[ 5 23  0  0  0  2  5  1]</p>
+</li>
+<li>
+<p>[ 4  2 28  1  3  3  7  0]</p>
+</li>
+<li>
+<p>[ 0  0  0 20 11  4  0  7]</p>
+</li>
+<li>
+<p>[ 0  0  1 11 20  0  0  0]</p>
+</li>
+<li>
+<p>[ 8  3  3  3  3 15  1  6]</p>
+</li>
+<li>
+<p>[ 2  9  5  0  1  1 19  0]</p>
+</li>
+<li>
+<p>[ 3  1  0  4  1  1  0 20]</p>
+</li>
+</ul>
+<h2 id="user-content-33-1">
+<a aria-hidden="true" class="anchor" href="#user-content-33-1" id="user-content-33-1" name="user-content-33-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3</h2>
+<h3 id="user-content-mlp">
+<a aria-hidden="true" class="anchor" href="#user-content-mlp" id="user-content-mlp" name="user-content-mlp"><span aria-hidden="true" class="octicon octicon-link"></span></a>MLP</h3>
+<p><a href="/images/mlp_model.png" rel="noopener noreferrer" target="_blank"><img alt="9. Multi layer perceptron arhitecture" data-canonical-src="/images/mlp_model.png" src="/images/mlp_model.png" style="max-width:100%; max-height: 516px;" title="9. Multi layer perceptron arhitecture"/></a></p>
+<p><a href="/images/mlp_loss_plot.png" rel="noopener noreferrer" target="_blank"><img alt="9.b Multi layer perceptron training curve" data-canonical-src="/images/mlp_loss_plot.png" src="/images/mlp_loss_plot.png" style="max-width:100%; max-height: 480px;" title="9.b. Multi layer perceptron training curve"/></a></p>
+<p>(batch_size, optimizator, epoci)</p>
+<ul>
+<li>8, Adam, 5: 0.74</li>
+<li>8, Adam, 10: [0.7781]</li>
+<li>8, SGD, 5: 0.73</li>
+<li>8, SGD, 10: 0.40</li>
+<li>16, Adam, 5: 0.7116</li>
+<li>16, Adam, 10: 0.6406</li>
+<li>16, SGD, 5: 0.468</li>
+<li>16, SGD, 10: 0.651</li>
+</ul>
+<h3 id="user-content-lstm">
+<a aria-hidden="true" class="anchor" href="#user-content-lstm" id="user-content-lstm" name="user-content-lstm"><span aria-hidden="true" class="octicon octicon-link"></span></a>LSTM</h3>
+<p><a href="/images/lstm_model.png" rel="noopener noreferrer" target="_blank"><img alt="10. LSTM arhitecture" data-canonical-src="/images/lstm_model.png" src="/images/lstm_model.png" style="max-width:100%; max-height: 627px;" title="10. LSTM arhitecture"/></a></p>
+<p>(batch_size, optimizator, epoci)</p>
+<ul>
+<li>8, Adam, 5: 0.22</li>
+<li>8, Adam, 10: 0.21</li>
+<li>8, SGD, 5: 0.14</li>
+<li>8, SGD, 10: 0.16</li>
+<li>16, Adam, 5: [0.24]</li>
+<li>16, Adam, 10: 0.19</li>
+<li>16, SGD, 5: 0.08</li>
+<li>16, SGD, 10: 0.21</li>
+</ul>
+<h3 id="user-content-cnn">
+<a aria-hidden="true" class="anchor" href="#user-content-cnn" id="user-content-cnn" name="user-content-cnn"><span aria-hidden="true" class="octicon octicon-link"></span></a>CNN</h3>
+<p><a href="/images/cnn_model.png" rel="noopener noreferrer" target="_blank"><img alt="11. Convolutional network arhitecture" data-canonical-src="/images/cnn_model.png" src="/images/cnn_model.png" style="max-width:100%; max-height: 627px;" title="11. Convolutional network arhitecture"/></a></p>
+<p>![12. Convolutional network loss plot](data/images/loss_curves/cnn_loss_plot.png" 12. Convolutional network training curve")</p>
+<p>(batch_size, optimizator, epoci)</p>
+<ul>
+<li>8, Adam, 5: 0.125</li>
+<li>8, Adam, 10: [0.19]</li>
+<li>8, SGD, 5: 0.10</li>
+<li>8, SGD, 10: 0.165</li>
+<li>16, Adam, 5: 0.125</li>
+<li>16, Adam, 10: 0.121</li>
+<li>16, SGD, 5: 0.05</li>
+<li>16, SGD, 10: 0.18</li>
+</ul>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
