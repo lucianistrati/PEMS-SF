@@ -163,7 +163,6 @@ def plot_facetgrid(df, variable_name: str, num_classes: int, dimension_name: str
     plt.show()
 
 
-# PEMS-SF dataset associated plots
 def boxplot(X, take: int = 8):
     plt.boxplot(X)
     plt.savefig("data/images/boxplot.png")
