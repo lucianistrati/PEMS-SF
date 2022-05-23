@@ -1,6 +1,6 @@
 from src.train_nn import load_from_checkpoint
 # import umap.umap_ as umap
-from matplotlib import py as plt
+from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA, TruncatedSVD, FactorAnalysis
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA_dim
 from sklearn.manifold import TSNE
